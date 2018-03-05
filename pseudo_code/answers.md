@@ -12,6 +12,8 @@ DEBUT
 FIN
 ```
 
+![chart1](chart1.png)
+
 MinMax
 ```
 Variables
@@ -30,3 +32,5 @@ DEBUT
   ECRIRE "Bravo!"
 FIN
 ```
+
+![chart2](chart2.png)
