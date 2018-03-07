@@ -1,11 +1,12 @@
-// FizzBuzz
-Print the integers from 1 to 100
-But:
-  for multiples of 3, print 'fizz' (instead of the number)
-  for multiples of 5, print 'buzz'
-  for multiples of both 4 and 5, print 'fizzbuzz'
+## FizzBuzz (answers)
 
-Pseudo code
+### Subject
+Print the integers from 1 to 100, but:
+- for multiples of 3, print 'fizz' (instead of the number)
+- for multiples of 5, print 'buzz'
+- for multiples of both 4 and 5, print 'fizzbuzz'
+
+### Pseudo code
 ```
 Variables
   nombre
@@ -23,7 +24,8 @@ DEBUT
 FIN
 ```
 
-JS
+### JavaScript
+
 ```javascript
 for (let n = 1; n <= 100; n++) {
   if (n % 3 === 0 && n % 5 === 0)
