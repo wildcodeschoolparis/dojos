@@ -28,14 +28,15 @@ FIN
 
 ```javascript
 for (let n = 1; n <= 100; n++) {
-  if (n % 3 === 0 && n % 5 === 0)
+  if (n % 3 === 0 && n % 5 === 0) {
     console.log("fizzbuzz")
-  else if (n % 3 === 0)
+  } else if (n % 3 === 0) {
     console.log("fizz")
-  else if (n % 5 === 0)
+  } else if (n % 5 === 0) {
     console.log("buzz")
-  else
+  } else {
     console.log(n)
+  }
 }
 ```
 
@@ -43,14 +44,15 @@ Avec une fonction
 ```javascript
 
 function fizzbuzz(n) {
-  if (n % 3 === 0 && n % 5 === 0)
+  if (n % 3 === 0 && n % 5 === 0) {
     console.log("fizzbuzz")
-  else if (n % 3 === 0)
+  } else if (n % 3 === 0) {
     console.log("fizz")
-  else if (n % 5 === 0)
+  } else if (n % 5 === 0) {
     console.log("buzz")
-  else
+  } else {
     console.log(n)
+  }
 }
 
 for (let n = 1; n <= 100; n++) {
