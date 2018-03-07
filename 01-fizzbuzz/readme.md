@@ -1,6 +1,5 @@
 ## FizzBuzz
 
-### Subject
 Print the integers from 1 to 100, but:
 - for multiples of 3, print 'fizz' (instead of the number)
 - for multiples of 5, print 'buzz'
