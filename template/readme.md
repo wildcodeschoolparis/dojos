@@ -1,8 +1,5 @@
-## <Name>
+## NAME
 
-<Subjet>
-  ...
-  ...
-  ...
+Subject.. bla bla
 
 [answers](answers.md)
