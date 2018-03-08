@@ -1,10 +1,6 @@
-## <Name> (answers)
+## NAME (answers)
 
 ### Subject
-<Subjet>
-  ...
-  ...
-  ...
 
 ### Pseudo code
 ```
