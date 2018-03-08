@@ -24,7 +24,7 @@ FIN
 ```javascript
 var temperature = prompt("Water temperature?")
 
-if temperature >= 100 {
+if temperature <= 100 {
   console.log("It\'s Hot!")
 } else {
   console.log("It\'s not ready..")

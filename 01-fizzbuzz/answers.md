@@ -59,3 +59,6 @@ for (let n = 1; n <= 100; n++) {
   fizzbuzz(n)
 }
 ```
+
+## Refs
+- [Rosetta code](https://rosettacode.org/wiki/FizzBuzz) **(fizz buzz in other languages)**
