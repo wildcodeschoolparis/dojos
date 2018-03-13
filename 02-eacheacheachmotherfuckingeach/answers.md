@@ -13,9 +13,14 @@ Create a function `showSchools` which take an array of schools and print for eac
 Bonus:
 Create a function `getTotalStudents` which take an array of schools and return the total count of students
 
-notions: let/const, template strings, object/array, forEach
+### Notions
+- let/const
+- template strings
+- object/array
+- `for`/`for..of` loops, `forEach`
+- testing with `console.log` in Node.js
 
-### JavaScript
+### Code
 
 ```javascript
 const schoolParis = {
