@@ -32,11 +32,9 @@ const schoolList = [
   { city: 'lille', students: 23 },
   { city: 'strasbourg', students: 17 },
 ]
-
 ```
 
 ```javascript
-
 // for
 for (let i = 0; i < schoolList.length; i++) {
   const s = schoolList[i]
