@@ -58,9 +58,7 @@ while (i < schoolList.length) {
 
 // for..of
 for (const school of schoolList) {
-  const s = schoolList[i]
-
-  console.log(`${s.city} has ${s.students} students`)
+  console.log(`${school.city} has ${school.students} students`)
 }
 
 // forEach
