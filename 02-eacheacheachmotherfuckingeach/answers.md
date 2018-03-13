@@ -69,7 +69,6 @@ schoolList.forEach(s => console.log(`${s.city} has ${s.students} students`))
 
 ```javascript
 const getTotalStudents = schoolList => {
-
   let totalStudents = 0
   schoolList.forEach(s => {
     totalStudents += s.students
