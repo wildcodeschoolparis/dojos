@@ -11,7 +11,7 @@ Create a function `showSchools` which take an array of schools and print for eac
 
 Bonus. Create a function `getTotalStudents` which take an array of schools and return the total count of students
 
-### Notions
+### Concepts
 - let/const
 - template strings
 - object/array
