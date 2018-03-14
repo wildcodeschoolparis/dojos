@@ -26,13 +26,6 @@ const showSchools = list => {
   //   console.log(`${school.city} school has ${school.nbStudents} students`)
   // }
 
-
   list.forEach(school => console.log(school))
 }
-// showSchools(schoolList)
-
-
-const ages = [ 27, 32, 15, 51 ]
-
-const newAges = ages.forEach(age => age + 1)
-console.log(ages, newAges)
+showSchools(schoolList)
