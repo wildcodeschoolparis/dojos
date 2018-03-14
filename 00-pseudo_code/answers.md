@@ -1,9 +1,9 @@
-## isHot
+## Pseudo code
 
-### Subject
+### isHot
 Print if water is boiling
 
-### Pseudo code
+#### Pseudo code
 ```
 Variables
   temperature
@@ -17,10 +17,10 @@ DEBUT
 FIN
 ```
 
-### Chart
+#### Chart
 ![chart1](chart1.png)
 
-### JavaScript
+#### JavaScript
 ```javascript
 var temperature = prompt("Water temperature?")
 
@@ -53,15 +53,14 @@ function isHot(temperature) {
 const isHot = temperature => temperature >= 100
 ```
 
-## MinMax
+### MinMax
 
-### Subject
 Ask user to guess a number (integer) generated between 0 and 100, print:
 - "Bingo" if user answer is correct
 - "It's less" if user answer if above number
 - "It's more" if below
 
-### Pseudo code
+#### Pseudo code
 ```
 Variables
   age <- 45 (ou RANDOM[0, 100])
@@ -80,11 +79,11 @@ DEBUT
 FIN
 ```
 
-### Chart
+#### Chart
 
 ![chart2](chart2.png)
 
-### JavaScript
+#### JavaScript
 
 ```javascript
 var age = Math.floor(Math.random() * 100)

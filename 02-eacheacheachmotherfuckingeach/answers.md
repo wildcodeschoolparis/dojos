@@ -1,7 +1,6 @@
 ## Each
 
 ### Subject
-
 Declare an object `schoolParis` which properties describes our school
 > object should contain at least the city and the number of students
 
@@ -20,7 +19,6 @@ Bonus. Create a function `getTotalStudents` which take an array of schools and r
 - testing with `console.log` in Node.js
 
 ### Code
-
 ```javascript
 const schoolParis = {
   city: 'paris',
