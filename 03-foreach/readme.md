@@ -13,3 +13,5 @@ Create a function `forEach` which executes a provided function once for each arr
 Bonus. full implementation with all the optional arguments of the callback function
 
 see. [Array.forEach](http://devdocs.io/javascript/global_objects/array/foreach) for further details
+
+[answers](answers.md)
