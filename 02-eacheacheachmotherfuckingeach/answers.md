@@ -42,17 +42,17 @@ const schoolList = [
 const showSchools = list => {
   // with `for` loop
   for (let i = 0; i < list.length; i++) {
-    const s = list[i]
+    const school = list[i]
 
-    console.log(`${s.city} has ${s.students} students`)
+    console.log(`${school.city} has ${school.students} students`)
   }
 
   // OR with `while` loop
   let i = 0
   while (i < list.length) {
-    const s = list[i]
+    const school = list[i]
 
-    console.log(`${s.city} has ${s.students} students`)
+    console.log(`${school.city} has ${school.students} students`)
     i++
   }
 
@@ -62,7 +62,7 @@ const showSchools = list => {
   }
 
   // OR with `Array.forEach`
-  list.forEach(s => console.log(`${s.city} has ${s.students} students`))
+  list.forEach(school => console.log(`${school.city} has ${school.students} students`))
 }
 ```
 
@@ -70,8 +70,8 @@ const showSchools = list => {
 const getTotalStudents = list => {
   let totalStudents = 0
   
-  list.forEach(s => {
-    totalStudents += s.students
+  list.forEach(school => {
+    totalStudents += school.students
   })
 
   return totalStudents
