@@ -5,8 +5,7 @@ Create a function `forEach` which executes a provided function once for each arr
   - the **callback** function to execute for each element, taking 1 argument:
     - the value of the current element being processed in the array
 
-> (Obvioulsy) you are not allowed to use `Array.forEach`
-
+> (Obviously) you are not allowed to use `Array.forEach`
 
 ---
 
