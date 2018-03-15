@@ -23,7 +23,7 @@ see. [Array.forEach](http://devdocs.io/javascript/global_objects/array/foreach) 
 
 ```javascript
 const forEach = (arr, fn) => {
-  for (const elem in arr) {
+  for (const elem of arr) {
     fn(elem)
   }
 }
