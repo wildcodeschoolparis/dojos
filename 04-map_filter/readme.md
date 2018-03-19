@@ -41,3 +41,5 @@ Bonus. Create a `prettyPrintSchools' function that takes an array of schools and
 - toulouse (32) [ js | java ]
 - ...
 ```
+
+[answers](answers.md)

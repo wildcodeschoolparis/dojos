@@ -41,22 +41,55 @@ const increment = elem => {
 // forEach(table, increment)
 
 
-const urls = [
-  "http://source.com/image0.jpg",
-  "http://source.com/image1.jpg",
-  "http://source.com/image2.jpg",
-  "http://source.com/image3.jpg",
-  "http://source.com/image4.jpg",
-  "http://source.com/image5.jpg",
-  "http://source.com/image6.jpg",
-  "http://source.com/image7.jpg",
+const objs = [
+  { url: "http://source.com/image0.jpg", fn: () => {} },
+  { url: "http://source.com/image1.jpg", fn: () => {} },
+  { url: "http://source.com/image2.jpg", fn: () => {} },
+  { url: "http://source.com/image3.jpg", fn: () => {} },
+  { url: "http://source.com/image4.jpg", fn: () => {} },
+  { url: "http://source.com/image5.jpg", fn: () => {} },
+  { url: "http://source.com/image6.jpg", fn: () => {} },
+  { url: "http://source.com/image7.jpg", fn: () => {} },
 ]
 
-const createImg = url => `
-<div class="img">
-  <img src="${url}" />
+const createImg = obj => `
+<div class="image">
+  <img src="${obj.url}" />
+  <button onclick="${obj.fn}" />
 </div>
 `
-const images = urls.map(createImg)
+const images = objs.map(createImg)
 
 console.log(images)
+
+const element = document.getElementById('images')
+
+element.innerHTML = images
+
+
+<div id="images">
+  <div class="image">
+    <img src="http://source.com/img0.jpg" />
+  </div>
+  <div class="image">
+    <img src="http://source.com/image1.jpg" />
+  </div>
+  <div class="image">
+    <img src="http://source.com/image2.jpg" />
+  </div>
+  <div class="image">
+    <img src="http://source.com/image3.jpg" />
+  </div>
+  <div class="image">
+    <img src="http://source.com/image4.jpg" />
+  </div>
+  <div class="image">
+    <img src="http://source.com/image5.jpg" />
+  </div>
+  <div class="image">
+    <img src="http://source.com/image6.jpg" />
+  </div>
+  <div class="image">
+    <img src="http://source.com/image7.jpg" />
+  </div>
+<div/>
