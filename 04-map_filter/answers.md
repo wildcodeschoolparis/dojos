@@ -22,19 +22,18 @@ Create a function `getSchoolCities` which take an array of schools and return th
 
 ---
 
-Create a `getBiggestSchools` function that takes an array of schools and returns only those with at least 30 students
+Create a function `getBiggestSchools` that takes an array of schools and returns only those with at least 30 students
 
 ---
 
-Create a `filterByLanguage` function that takes 2 arguments:
+Create a function `filterByLanguage` that takes 2 arguments:
   - an array of schools
   - a 'language' value
 and returns only schools that teach that language
 
 ---
 
-Bonus. Create a `prettyPrintSchools` function that takes an array of schools and returns a pretty formatted string such as
-
+Bonus. Create a function `prettyPrintSchools` that takes an array of schools and returns a pretty formatted string such as
 ```
 - la loupe (14) [ js ]
 - paris (51) [ js ]
