@@ -55,6 +55,9 @@ const getSchoolCities = schools => schools.map(school => school.city)
 const getBiggestSchools = schools => schools
   .filter(school => school.students >= 30)
 
+const biggestSchools = getBiggestSchools(schoolList).map(getSchoolCities)
+console.log(biggestSchools)
+
 
 const filterByLanguage = (schools, language) => schools
   .filter(school => school.languages.includes(language))
