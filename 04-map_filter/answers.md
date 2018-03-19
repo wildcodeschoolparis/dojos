@@ -64,8 +64,10 @@ const filterByLanguage = (schools, language) => schools
 const jsSchools = filterByLanguage(schoolList, 'js')
 
 
-const prettyPrint = schools => schools
+const prettyPrintSchools = schools => schools
   .map(s => `- ${s.city} (${s.students}) [ ${s.languages.join(" | ")} ]`)
   .join('\n')
+  
+console.log(prettyPrintSchools(schoolList))
 ```
 
