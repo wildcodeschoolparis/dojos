@@ -56,14 +56,14 @@ const getBiggestSchools = schools => schools
   .filter(school => school.students >= 30)
 
 
+const filterByLanguage = (schools, language) => schools
+  .filter(school => school.languages.includes(language))
+
+const jsSchools = filterByLanguage(schoolList, 'js')
+
+
 const prettyPrint = schools => schools
   .map(s => `- ${s.city} (${s.students}) [ ${s.languages.join(" | ")} ]`)
   .join('\n')
-
-
-const filterByStack = (schools, language) => schools
-  .filter(school => school.languages.includes(language))
-
-const jsSchools = filterByStack(schoolList, 'js')
 ```
 
