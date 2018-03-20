@@ -44,6 +44,7 @@ Bonus. Create a function `prettyPrintSchools` which takes an array of schools an
 ### Concepts
 - map/filter
 - includes
+- join
 
 ### Code
 
