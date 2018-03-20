@@ -42,9 +42,10 @@ Bonus. Create a function `prettyPrintSchools` which takes an array of schools an
 ```
 
 ### Concepts
-- map/filter
-- includes
-- join
+- [map](http://devdocs.io/javascript/global_objects/array/map)
+- [filter](http://devdocs.io/javascript/global_objects/array/filter)
+- [includes](http://devdocs.io/javascript/global_objects/array/includes)
+- [join](http://devdocs.io/javascript/global_objects/array/join)
 
 ### Code
 
@@ -83,6 +84,7 @@ const getBiggestSchool = schools => {
 // OR simplified
 
 const isBigSchool = school => school.students >= 30
+
 const getBiggestSchools = schools => schools.filter(isBigSchool)
 
 
