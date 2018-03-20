@@ -18,7 +18,7 @@ const schoolList = [
 ]
 ```
 
-Create a function `getSchoolCities` which takes an array of schools and return their cities in an other Array
+Create a function `getSchoolCities` which takes an array of schools and return their cities
 
 ---
 

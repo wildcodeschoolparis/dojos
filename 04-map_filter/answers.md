@@ -48,9 +48,21 @@ Bonus. Create a function `prettyPrintSchools` which takes an array of schools an
 ### Code
 
 ```javascript
+
+const getSchoolCities = schools => {
+  const getCity = school => {
+    return school.city
+  }
+
+  return schools.map(getCity)
+})
+
+// OR simplified
+
 const getSchoolCities = schools => schools.map(school => school.city)
+```
 
-
+```javascript
 const getBiggestSchool = schools => {
   const isBigSchool = school => {
     if (school.students >= 30) {
@@ -63,25 +75,26 @@ const getBiggestSchool = schools => {
   return schools.filter(isBigSchool)
 }
 
-// OR
+// OR simplified
 
-const getBiggestSchools = schools => schools
-  .filter(school => school.students >= 30)
+const getBiggestSchools = schools => schools.filter(school => school.students >= 30)
 
 const biggestSchools = getBiggestSchools(schoolList).map(getSchoolCities)
 console.log(biggestSchools)
+```
 
-
+```javascript
 const filterByLanguage = (schools, language) => schools
   .filter(school => school.languages.includes(language))
 
 const jsSchools = filterByLanguage(schoolList, 'js')
+```
 
 
+```javascript
 const prettyPrintSchools = schools => schools
   .map(s => `- ${s.city} (${s.students}) [ ${s.languages.join(" | ")} ]`)
   .join('\n')
   
 console.log(prettyPrintSchools(schoolList))
 ```
-
