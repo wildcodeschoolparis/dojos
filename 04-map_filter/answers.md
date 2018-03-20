@@ -48,7 +48,6 @@ Bonus. Create a function `prettyPrintSchools` which takes an array of schools an
 ### Code
 
 ```javascript
-
 const getSchoolCities = schools => {
   const getCity = school => {
     return school.city
@@ -79,8 +78,7 @@ const getBiggestSchool = schools => {
 
 const getBiggestSchools = schools => schools.filter(school => school.students >= 30)
 
-const biggestSchools = getBiggestSchools(schoolList).map(getSchoolCities)
-console.log(biggestSchools)
+console.log(getBiggestSchools(schoolList))
 ```
 
 ```javascript
