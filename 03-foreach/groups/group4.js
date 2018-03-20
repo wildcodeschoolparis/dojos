@@ -1,3 +1,5 @@
+// group4 [ @alexis.theyssier, @frederic.paquet, @gaelle.fougere, @joffrey.chauleau, @frederic.olive, @louise.foussat ]
+
 // for (let i = 0; i < table.length; i++) {
 //   console.log(table[i])
 // }

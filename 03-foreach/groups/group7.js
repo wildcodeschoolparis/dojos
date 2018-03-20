@@ -1,3 +1,5 @@
+// group7 [ @christian.lim, @guillaume.nobis, @nadia.djellali, @christopher.fremond, @yann.coulleau ]
+
 const list = [ 1, 2, 3, 4, 5 ]
 
 // console.log(list[0])

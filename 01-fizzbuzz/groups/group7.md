@@ -1,3 +1,5 @@
+// group7 [ @hedi.kochad, @frederic.paquet, @christopher.fremond, @louise.foussat, @capucine.leclerc ]
+
 ## Pseudo Code
 
 ```

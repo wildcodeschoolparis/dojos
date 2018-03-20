@@ -1,3 +1,5 @@
+// group1 [ @daniel.deutsch, @quentin.roiseux, @pierre.langevin, @charles.chiacchia, @mohand.hassam, @smain.khaldi ]
+
 // for (let i = 0; i < list.length; i++) {
 //   console.log(list[i])
 // }

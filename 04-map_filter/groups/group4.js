@@ -1,3 +1,5 @@
+// group4 [ @capucine.leclerc, @edouard.de.laage, @charles.chiacchia, @bogdan.ceu, @constance.henrot, @hedi.kochad ]
+
 const assert = require('assert')
 
 const numbers = [ 1, 2, 3, 4, 5]

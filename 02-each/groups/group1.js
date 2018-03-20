@@ -1,3 +1,5 @@
+// group1 [ @sophie.michaudel, @samuel.sarano, @philippe.maguer, @helena.domlan, @mehdi.chtira, @joffrey.chauleau ]
+
 const schoolParis = {
   city: "Paris",
   students: 51

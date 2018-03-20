@@ -1,3 +1,5 @@
+// group1 [ @valery.chin, @mehdi.chtira, @sabrina.berguer, @samuel.lambert, @kim.spychalski, @mohand.hassam ]
+
 const assert = require('assert')
 
 const table = [ 1, 2, 3, 4 ]

@@ -1,3 +1,5 @@
+// group4 [ @charles.chiacchia, @alexis.theyssier, @constance.henrot, @mohand.hassam, @sophie.michaudel, @pierre.poretti ]
+
 ## Pseudo Code
 
 ```

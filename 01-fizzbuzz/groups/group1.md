@@ -1,3 +1,5 @@
+// group1 [ @christian.lim, @alex.bui, @guillaume.nobis, @aurelio.lima.ferreira, @nadia.djellali, @yvan.latorre ]
+
 ## Pseudo Code
 
 ```

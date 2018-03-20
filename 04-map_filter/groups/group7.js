@@ -1,3 +1,5 @@
+// group7 [ @helene.blanchard, @smain.khaldi, @aurelio.lima.ferreira, @nadia.djellali, @lorraine.chastang ]
+
 const numbers = [ 1, 2, 3, 4 ]
 
 // [ 1, 2, 3, 4 ] => [ 2, 3, 4, 5 ]

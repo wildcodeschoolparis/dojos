@@ -1,3 +1,5 @@
+// group4 [ @charles.chiacchia, @yvan.latorre, @marie.malarme, @alexis.theyssier, @mikael.verdu, @aurelio.lima.ferreira ]
+
 const schoolParis = {
   city: 'paris',
   nbStudents: 51

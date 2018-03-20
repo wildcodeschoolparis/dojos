@@ -1,3 +1,5 @@
+// group7 [ @bogdan.ceu, @frederic.olive, @louise.foussat, @romain.reslinger, @nadia.djellali ]
+
 const schoolParis = {
   city: "Paris",
   nbStudents: 51
