@@ -48,46 +48,69 @@ Bonus. Create a function `prettyPrintSchools` which takes an array of schools an
 ### Code
 
 ```javascript
-const getSchoolCities = schools => {
-  const getCity = school => {
-    return school.city
-  }
+const getCity = school => {
+  return school.city
+}
 
+const getSchoolCities = schools => {
   return schools.map(getCity)
 })
 
 // OR simplified
 
-const getSchoolCities = schools => schools.map(school => school.city)
+const getCity = school => school.city
+
+const getSchoolCities = schools => schools.map(getCity)
+
+
+console.log(getSchoolCities(schoolList))
 ```
 
 ```javascript
-const getBiggestSchool = schools => {
-  const isBigSchool = school => {
-    if (school.students >= 30) {
-      return true
-    }
-
-    return false
+const isBigSchool = school => {
+  if (school.students >= 30) {
+    return true
   }
 
+  return false
+}
+
+const getBiggestSchool = schools => {
   return schools.filter(isBigSchool)
 }
 
 // OR simplified
 
-const getBiggestSchools = schools => schools.filter(school => school.students >= 30)
+const isBigSchool = school => school.students >= 30
+const getBiggestSchools = schools => schools.filter(isBigSchool)
+
 
 console.log(getBiggestSchools(schoolList))
 ```
 
 ```javascript
-const filterByLanguage = (schools, language) => schools
-  .filter(school => school.languages.includes(language))
+const hasLanguage = (school, language) => {
+  if (school.languages.includes(language)) {
+    return true
+  }
+
+  return false
+}
+
+const filterByLanguage = (schools, language) => {
+  schools.filter(school => hasLanguage(school, language))
+}
+
+// OR simplified
+
+const hasLanguage = (school, language) => school.languages.includes(language)
+
+const filterByLanguage = (schools, language) => schools.filter(school => hasLanguage(school, language))
+
 
 const jsSchools = filterByLanguage(schoolList, 'js')
+console.log(jsSchools)
 ```
-
 
 ```javascript
 const prettyPrintSchools = schools => schools
