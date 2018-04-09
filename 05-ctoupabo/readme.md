@@ -12,6 +12,19 @@ git checkout dojo-ctoupabo
 
 Make it work
 
+
+#### tips
+
+Run the server
+```
+node server
+```
+
+Serve the client
+```
+http-server client
+```
+
 ---
 
-[answers](https://github.com/akabab/todos/commit/005dfd6229c7332c4a5a593ad3e90f18b3c75611)
+[answers](https://github.com/akabab/todos/commit/785ac8ae067597c0ffe822a02244e44f20fe08fe)
