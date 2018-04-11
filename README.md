@@ -6,3 +6,4 @@
 - **15/03/18** - [forEach](03-foreach)
 - **20/03/18** - [map/filter](04-map_filter)
 - **10/04/18** - [ctoupabo](05-ctoupabo)
+- **12/04/18** - [tas_de_katas](05-tas_de_katas)
