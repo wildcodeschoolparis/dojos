@@ -12,6 +12,8 @@ git checkout dojo-ctoupabo
 
 Make it work
 
+### expected
+![expected](expected.png)
 
 #### tips
 
