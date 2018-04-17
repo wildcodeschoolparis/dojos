@@ -9,7 +9,7 @@ const squareDigits = num => {
   
   const stringDigits = numString.split('')
 
-  const convertToInteger => x => Number(x)
+  const convertToInteger = x => Number(x)
   const digits = stringDigits.map(convertToInteger)
 
   const square = x => x * x
