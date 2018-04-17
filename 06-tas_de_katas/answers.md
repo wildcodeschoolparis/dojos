@@ -6,9 +6,9 @@
 ```javascript
 const evenOrOdd = number => {
   if (number % 2 === 0) {
-    return "Even"
+    return 'Even'
   } else {
-    return "Odd"
+    return 'Odd'
   }
 }
 
