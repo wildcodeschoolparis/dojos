@@ -95,7 +95,7 @@ const disemvowel = str => str
 [decode-the-morse-code](https://www.codewars.com/kata/decode-the-morse-code/train/javascript)
 
 ```javascript
-const MORSE_CODE = [
+const MORSE_CODE = {
   '-.-.--': '!',
   '.-..-.': '"',
   '...-..-': '$',
@@ -151,10 +151,10 @@ const MORSE_CODE = [
   '--..': 'Z',
   '..--.-': '_',
   '...---...': 'SOS'
-]
+}
 
 const decodeMorse = morse => {
-  const morseWords = morse.trim()split('   ') // trim whitespaces (to pass codewars tests..)
+  const morseWords = morse.trim().split('   ') // trim whitespaces (to pass codewars tests..)
 
   const decodeCharacter = c => MORSE_CODE[c] // decodeCharacter('....') -> 'H'
   
