@@ -7,3 +7,4 @@
 - **20/03/18** - [map/filter](04-map_filter)
 - **10/04/18** - [ctoupabo](05-ctoupabo)
 - **12/04/18** - [tas_de_katas](06-tas_de_katas)
+- **17/04/18** - [katatas](07-katatas)
