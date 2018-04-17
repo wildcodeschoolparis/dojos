@@ -4,7 +4,6 @@
 - [square-every-digit](https://www.codewars.com/kata/square-every-digit/train/javascript)
 
 ```javascript
-
 const squareDigits = num => {
   const numString = String(num)
   
