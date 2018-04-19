@@ -8,3 +8,4 @@
 - **10/04/18** - [ctoupabo](05-ctoupabo)
 - **12/04/18** - [tas_de_katas](06-tas_de_katas)
 - **17/04/18** - [kakatas](07-kakatas)
+- **19/04/18** - [katas-3](08-katas-3)
