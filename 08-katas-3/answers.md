@@ -16,12 +16,14 @@ const descendingOrder = n => {
 
 // simplified
 
+const desc = (a, b) => b - a
+
 const descendingOrder = n => {  // 23461
 
   const result = String(n)      // '23461'
     .split('')                  // [ '2', '3', '4', '6', '1' ]
     .map(Number)                // [ 2, 3, 4, 6, 1 ] 
-    .sort((a, b) => b - a)      // [ 6, 4, 3, 2, 1 ] 
+    .sort(desc)      // [ 6, 4, 3, 2, 1 ] 
     .join('')                   // '64321'
   
   return Number(result)         // 64321
