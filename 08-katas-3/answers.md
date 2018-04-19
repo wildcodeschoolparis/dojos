@@ -1,5 +1,6 @@
 ## kakatas
-# 7 kyus
+
+### 7 kyu
 - [descending-order](https://www.codewars.com/kata/descending-order/train/javascript)
 
 ```javascript
@@ -32,7 +33,7 @@ const descendingOrder = n => Number(String(n).split('').map(Number).sort((a, b) 
 const descendingOrder = n => Number(String(n).split('').sort().reverse().join(''))
 ```
 
-# 6 kyus
+### 6 kyu
 - [find-the-parity-outlier](https://www.codewars.com/kata/find-the-parity-outlier/train/javascript)
 
 ```javascript
