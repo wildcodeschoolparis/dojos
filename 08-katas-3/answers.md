@@ -1,4 +1,4 @@
-## kakatas
+## katas 3
 
 ### 7 kyu
 - [descending-order](https://www.codewars.com/kata/descending-order/train/javascript)
