@@ -44,9 +44,25 @@ const likes = names => {
 // case 3: return `${names[0]}, ${likes(names.slice(1))}`
 ```
 
-
 ### 5 kyu
 - [convert-string-to-camel-case](https://www.codewars.com/kata/convert-string-to-camel-case/train/javascript)
+
+```javascript
+const capitalize = w => w[0].toUpperCase() + w.slice(1)
+
+const toCamelCase = str => str
+  .replace(/[^A-Z|a-z]/g, ' ')
+  .split(' ')
+  .map((w, i) => i > 0 ? capitalize(w) : w)
+  .join('')
+
+// simplified version with minimal matching
+
+const toCamelCase = str => str.replace(/[-_ ]\w/ig, m => m[1].toUpperCase()) 
+// [-_ ]\w matches any word (\w) preceeded by '-', '_' or ' '
+
+toCamelCase('Code_wars_rocks') // -> matches : '_w' and '_r'
+```
 
 ### 4 kyu
 - [human-readable-duration-format](https://www.codewars.com/kata/human-readable-duration-format/train/javascript)
