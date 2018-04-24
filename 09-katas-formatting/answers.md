@@ -14,8 +14,36 @@ const formatMoney = amount => `$${amount.toFixed(2)}`
 ### 7 kyu
 - [jaden-casing-strings](https://www.codewars.com/kata/jaden-casing-strings/train/javascript)
 
+```javascript
+const solution = value => {
+  const paddedValue = '00000' + value
+  
+  return `Value is ${paddedValue.slice(-5)}`
+}
+
+// inlined
+
+const solution = value => `Value is ${('00000' + value).slice(-5)}`
+```
+
 ### 6 kyu
 - [who-likes-it](https://www.codewars.com/kata/who-likes-it/train/javascript)
+
+```javascript
+const likes = names => {
+  switch (names.length) {
+    case 0: return 'no one likes this'
+    case 1: return `${names[0]} likes this`
+    case 2: return `${names[0]} and ${names[1]} like this`
+    case 3: return `${names[0]}, ${names[1]} and ${names[2]} like this`
+    default: return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+  }
+}
+
+// for curious: recursive variation for `case 3:`
+// case 3: return `${names[0]}, ${likes(names.slice(1))}`
+```
+
 
 ### 5 kyu
 - [convert-string-to-camel-case](https://www.codewars.com/kata/convert-string-to-camel-case/train/javascript)
