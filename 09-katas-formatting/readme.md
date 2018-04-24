@@ -4,7 +4,7 @@
 - [dollars-and-cents](https://www.codewars.com/kata/dollars-and-cents/train/javascript)
 
 ### 7 kyu
-- [jaden-casing-strings](https://www.codewars.com/kata/jaden-casing-strings/train/javascript)
+- [substituting-variables-into-strings-padded-numbers](https://www.codewars.com/kata/substituting-variables-into-strings-padded-numbers/train/javascript)
 
 ### 6 kyu
 - [who-likes-it](https://www.codewars.com/kata/who-likes-it/train/javascript)
