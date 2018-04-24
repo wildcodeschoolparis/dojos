@@ -9,3 +9,4 @@
 - **12/04/18** - [tas_de_katas](06-tas_de_katas) (**algo**, **codewars**)
 - **17/04/18** - [kakatas](07-kakatas) (**algo**, **codewars**)
 - **19/04/18** - [katas-3](08-katas-3) (**algo**, **codewars**)
+- **24/04/18** - [katas-formatting](09-katas-formatting) (**algo**, **formatting**, **codewars**)
