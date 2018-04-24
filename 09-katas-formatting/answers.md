@@ -12,7 +12,7 @@ const formatMoney = amount => `$${amount.toFixed(2)}`
 ```
 
 ### 7 kyu
-- [jaden-casing-strings](https://www.codewars.com/kata/jaden-casing-strings/train/javascript)
+- [substituting-variables-into-strings-padded-numbers](https://www.codewars.com/kata/substituting-variables-into-strings-padded-numbers/train/javascript)
 
 ```javascript
 const solution = value => {
