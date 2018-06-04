@@ -7,6 +7,22 @@ class App extends Component {
 
   state = {
     users: [],
+    friends: [],
+  }
+
+  addFriend = id => {
+    // check if already present to avoid duplicates
+    if (this.state.friends.find(user => user.id === id)) {
+      return
+    }
+
+    // get friend by id from users
+    const friend = this.state.users.find(user => user.id === id)
+
+    // push friend to the friend list
+    const friends = [ ...this.state.friends, friend ]
+
+    this.setState({ friends: friends })
   }
 
   componentDidMount() {
@@ -23,7 +39,7 @@ class App extends Component {
     console.log('render', { state: this.state })
 
     const users = this.state.users.map(user =>
-      <User key={user.id} name={user.name} />
+      <User key={user.id} id={user.id} name={user.name} add={this.addFriend} />
     )
 
     return (

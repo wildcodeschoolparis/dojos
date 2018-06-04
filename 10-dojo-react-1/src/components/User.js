@@ -1,8 +1,9 @@
 import React from 'react'
 
-const User = ({ name }) =>
+const User = ({ id, name, add }) =>
   <div>
-    {name}
+    <span>{name}</span>
+    <button onClick={() => add(id)}>Add</button>
   </div>
 
 export default User
