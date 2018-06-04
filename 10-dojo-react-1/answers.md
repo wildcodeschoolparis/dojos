@@ -20,5 +20,5 @@
 
 -----
 
-Whole answer is available on the `10-answers` branch of the repo  
-https://github.com/wildcodeschoolparis/dojos/tree/10-answers/10-dojo-react-1
+Whole answer is available on the [`10-answers`](https://github.com/wildcodeschoolparis/dojos/tree/10-answers/10-dojo-react-1) branch of the repo  
+
