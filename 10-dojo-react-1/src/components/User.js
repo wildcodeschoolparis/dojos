@@ -1,9 +1,11 @@
 import React from 'react'
 
-const User = ({ id, name, add }) =>
+// /!\ Advanced
+// - elements passed as children of a components are accessible through props.children
+const User = ({ name, children }) =>
   <div>
     <span>{name}</span>
-    <button onClick={() => add(id)}>Add</button>
+    {children}
   </div>
 
 export default User

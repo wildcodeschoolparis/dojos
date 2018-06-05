@@ -25,6 +25,12 @@ class App extends Component {
     this.setState({ friends: friends })
   }
 
+  removeFriend = id => {
+    const friends = this.state.friends.filter(user => user.id !== id)
+
+    this.setState({ friends: friends })
+  }
+
   componentDidMount() {
     // We simulate users comes from a fetch call to an API
 
@@ -38,12 +44,19 @@ class App extends Component {
     // log state on each render
     console.log('render', { state: this.state })
 
-    const friends = this.state.friends.map(friend =>
-      <div key={friend.id}>{friend.name}</div>
+    // /!\ Advanced
+    // - spread all `user` properties as User props
+    // - pass a button element as a child of the User component
+    const friends = this.state.friends.map(user =>
+      <User key={user.id} {...user}>
+        <button onClick={() => this.removeFriend(user.id)}>Remove</button>
+      </User>
     )
 
     const users = this.state.users.map(user =>
-      <User key={user.id} id={user.id} name={user.name} add={this.addFriend} />
+      <User key={user.id} {...user}>
+        <button onClick={() => this.addFriend(user.id)}>Add</button>
+      </User>
     )
 
     return (
