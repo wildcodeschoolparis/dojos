@@ -17,3 +17,5 @@
 ### Bobobonus
 - Remove button
 - Pimp
+
+[answers](answers.md)
