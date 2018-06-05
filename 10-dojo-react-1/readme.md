@@ -5,7 +5,7 @@
 - Clean
 
 ### Users list
-- Display the list of users (from `users.json` provided by your bosses)
+- Display the list of users (from [`users.json`](https://github.com/wildcodeschoolparis/dojos/blob/master/10-dojo-react-1/users.json) provided by your bosses)
   - Create a component `User`
 
 ### Friends / Foes list
@@ -17,3 +17,5 @@
 ### Bobobonus
 - Remove button
 - Pimp
+
+[answers](answers.md)
