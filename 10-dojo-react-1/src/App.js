@@ -38,12 +38,19 @@ class App extends Component {
     // log state on each render
     console.log('render', { state: this.state })
 
+    const friends = this.state.friends.map(friend =>
+      <div key={friend.id}>{friend.name}</div>
+    )
+
     const users = this.state.users.map(user =>
       <User key={user.id} id={user.id} name={user.name} add={this.addFriend} />
     )
 
     return (
       <div className="App">
+        <span>--FRIENDS--</span>
+        <div>{friends}</div>
+        <span>--USERS--</span>
         <div>{users}</div>
       </div>
     )
