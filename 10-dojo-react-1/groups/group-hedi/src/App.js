@@ -23,12 +23,22 @@ class App extends Component {
     this.setState({ users: fetchedUsers })
   }
 
-  addFriend = user => {
+  // map
+  // filter
+  // reduce
+
+  // find | findIndex
+  // some | every
+
+  addFriend = user => { // user { "id": 3, "name": "Amel Braiek" },
     const friends = this.state.friends
 
-    friends.push(user)
+    const userIsAlreadyFriend = friends.some(friend => user.id === friend.id)
 
-    this.setState({ friends: friends })
+    if (!userIsAlreadyFriend) {
+      friends.push(user)
+      this.setState({ friends: friends })
+    }
   }
 
   render() {
