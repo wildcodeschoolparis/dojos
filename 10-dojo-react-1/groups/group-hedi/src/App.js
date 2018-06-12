@@ -1,26 +1,30 @@
 import React, { Component } from 'react'
 import './App.css'
 import User from './components/User.js'
-import fetchedUsers from './users.json'
+import mockedUsers from './users.json'
+import store from './store.js'
 
 class App extends Component {
-
-  state = {
-    users: [],
-    friends: []
-  }
 
   constructor() {
     super()
 
-    console.log('constructor')
+    // init state with our redux store
+    this.state = store.getState()
+    // & subscribe to changes -> react will re-render the view
+    store.subscribe(() => {
+      this.setState(store.getState())
+    })
   }
 
   componentDidMount() {
-    console.log('mount')
+    // fetch our data from API
+    fetch('https://raw.githubusercontent.com/wildcodeschoolparis/datas/master/students.json')
+      .then(res => res.json())
+      .then(fetchedUsers => store.dispatch({ type: 'LOAD_USERS', users: fetchedUsers }))
 
-    // fetch -> users
-    this.setState({ users: fetchedUsers })
+    // OR from mocks
+    // store.dispatch({ type: 'LOAD_USERS', users: mockedUsers })
   }
 
   // map
@@ -30,19 +34,24 @@ class App extends Component {
   // find | findIndex
   // some | every
 
-  addFriend = user => { // user { "id": 3, "name": "Amel Braiek" },
+  addFriend = newFriend => {
+
     const friends = this.state.friends
 
-    const userIsAlreadyFriend = friends.some(friend => user.id === friend.id)
+    const isAlreadyFriend = friends.some(friend => newFriend.id === friend.id)
 
-    if (!userIsAlreadyFriend) {
-      friends.push(user)
-      this.setState({ friends: friends })
+    // add new friend only if not already friend
+    if (!isAlreadyFriend) {
+      const action = { type: 'ADD_FRIEND', newFriend: newFriend }
+      store.dispatch(action)
+      store.dispatch({ type: 'CHANGE_MESSAGE', message: `${newFriend.name} is now your friend!` })
+    } else {
+      store.dispatch({ type: 'CHANGE_MESSAGE', message: `${newFriend.name} is already your friend!` })
     }
   }
 
   render() {
-    console.log('render', {state: this.state})
+    console.log('render')
 
     const friends = this.state.friends.map(friend =>
       <div key={friend.id}>{friend.name}</div>
@@ -54,6 +63,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <div>MESSAGE:<span>{this.state.message}</span></div>
         <span>--FRIENDS--</span>
         {friends}
         <span>--USERS--</span>
