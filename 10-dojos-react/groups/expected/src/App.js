@@ -1,48 +1,42 @@
 import React, { Component } from 'react'
 import './App.css'
-import fetchedUsers from './users.json'
 import User from './components/User'
+import mockedUsers from './users.json'
+import store from './store.js'
 
 class App extends Component {
 
-  state = {
-    users: [],
-    friends: [],
+  constructor() {
+    super()
+
+    // init state with our redux store
+    this.state = store.getState()
+    // & subscribe to changes -> react will re-render the view
+    store.subscribe(() => {
+      this.setState(store.getState())
+    })
   }
 
   addFriend = id => {
-    // check if already present to avoid duplicates
-    if (this.state.friends.find(user => user.id === id)) {
-      return
-    }
-
-    // get friend by id from users
-    const friend = this.state.users.find(user => user.id === id)
-
-    // push friend to the friend list
-    const friends = [ ...this.state.friends, friend ]
-
-    this.setState({ friends: friends })
+    store.dispatch({ type: 'ADD_FRIEND', id: id })
   }
 
   removeFriend = id => {
-    const friends = this.state.friends.filter(user => user.id !== id)
-
-    this.setState({ friends: friends })
+    store.dispatch({ type: 'REMOVE_FRIEND', id: id })
   }
 
   componentDidMount() {
-    // We simulate users comes from a fetch call to an API
+    // fetch our data from API
+    fetch('https://raw.githubusercontent.com/wildcodeschoolparis/datas/master/students.json')
+      .then(res => res.json())
+      .then(fetchedUsers => store.dispatch({ type: 'LOAD_USERS', users: fetchedUsers }))
 
-    // we would do the fetch call here in the `componentDidMount`
-    // here, our fetched users comes from the users.json
-
-    this.setState({ users: fetchedUsers })
+    // OR from mocks
+    // store.dispatch({ type: 'LOAD_USERS', users: mockedUsers })
   }
 
   render() {
-    // log state on each render
-    console.log('render', { state: this.state })
+    console.log('render')
 
     // /!\ Advanced
     // - spread all `user` properties as User props
