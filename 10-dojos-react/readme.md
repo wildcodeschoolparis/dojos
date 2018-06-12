@@ -21,8 +21,10 @@
   - on click on a friend/foe, it should be removed from the list
 - Pimp
 
-[answers](answers.md)
+[answers](answers.html#1---react-basics)
 
 ### 2 - React with Redux
 
 Refactor your app to use redux as state manager
+
+[answers](answers.html#2---react-with-redux)
