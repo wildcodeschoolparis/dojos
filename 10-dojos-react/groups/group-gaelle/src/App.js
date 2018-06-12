@@ -1,58 +1,39 @@
 import React, { Component } from 'react'
 import './App.css'
-import fetchedUsers from './users.json'
+import store from './store.js'
+import { addFriend, loadUsers, removeFriend } from './actions.js'
 import User from './components/User'
 
 class App extends Component {
 
-  state = {
-    users: [],
-    friends: []
-  }
+  constructor(){
+    super()
+    this.state = store.getState()
+    store.subscribe(() => this.setState(store.getState()))
 
-  removeFriend = friend => {
-    const friends = this.state.friends.filter(user => user.id !== friend.id)
-
-    // const oldFriendIndex = this.state.friends.findIndex(user => user.id === friend.id)
-    // const friends = [
-    //   ...this.state.friends.slice(0, oldFriendIndex),
-    //   ...this.state.friends.slice(oldFriendIndex + 1)
-    // ]
-
-    this.setState({ friends })
-  }
-
-  addFriend = friend => {
-    // check if already exists
-    if (this.state.friends.find(user => user.id === friend.id)) {
-      return
-    }
-
-    this.setState({ friends: [ ...this.state.friends, friend ] })
+    // store.subscribe(() => this.forceUpdate())
   }
 
   componentDidMount() {
-    // fetch -> fetchedUsers
+    const url = 'https://raw.githubusercontent.com/wildcodeschoolparis/datas/master/students.json'
 
-    this.setState({ users: fetchedUsers })
+    fetch(url)
+      .then(res => res.json())
+      .then(users => store.dispatch(loadUsers(users)))
   }
 
   render() {
-    console.log('render', { state: this.state })
-
-    // const users = this.state.users.map(User)
-    // const users = this.state.users.map(user => <User {...user} />)
-    // const users = this.state.users.map(user => <User id={user.id} name={user.name} />)
+    console.log('render')
 
     const friends = this.state.friends.map(friend =>
       <User key={friend.id} user={friend}>
-        <button onClick={() => this.removeFriend(friend)}>REMOVE</button>
+        <button onClick={() => store.dispatch(removeFriend(friend))}>REMOVE</button>
       </User>
     )
 
     const users = this.state.users.map(user =>
       <User key={user.id} user={user}>
-        <button onClick={() => this.addFriend(user)}>ADD ME</button>
+        <button onClick={() => store.dispatch(addFriend(user))}>ADD ME</button>
       </User>
     )
 
