@@ -21,8 +21,6 @@
   - on click on a friend/foe, it should be removed from the list -> [answer](https://github.com/wildcodeschoolparis/dojos/commit/1775e932dc2f6e099f3780524032236561d22018)
 - Pimp -> [answer](https://media.giphy.com/media/sjYZq3QIqOQtq/giphy.gif)
 
-[answers](answers.md)
-
 ### 2 - React with Redux
 
 Refactor your app to use redux as state manager -> [answer](https://github.com/wildcodeschoolparis/dojos/commit/4f550aefeae4663055f97f3892514d80a64f2171)
