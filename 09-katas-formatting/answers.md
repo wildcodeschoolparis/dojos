@@ -66,3 +66,44 @@ toCamelCase('Code_wars_rocks') // -> matches : '_w' and '_r'
 
 ### 4 kyu
 - [human-readable-duration-format](https://www.codewars.com/kata/human-readable-duration-format/train/javascript)
+
+```javascript
+const second = 1
+const minute = 60
+const hour = 60 * minute
+const day = 24 * hour
+const year = 365 * day
+
+const decompose = seconds => {
+  const y = Math.floor(seconds / year)
+  seconds -= y * year
+  const d = Math.floor(seconds / day)
+  seconds -= d * day
+  const h = Math.floor(seconds / hour)
+  seconds -= h * hour
+  const m = Math.floor(seconds / minute)
+  seconds -= m * minute
+  const s = seconds
+  
+  return [ y, d, h, m, s ]
+}
+
+const units = [ 'year', 'day', 'hour', 'minute', 'second' ]
+
+const formatDuration = seconds => {
+  const t = decompose(seconds)
+  
+  const formatted = t
+    .map((u, i) => u > 0 ? `${u} ${units[i]}${u > 1 ? 's' : ''}` : null)
+    .filter(u => u !== null)
+    
+  if (!formatted.length) {
+    return 'now'
+  }
+  
+  return formatted.reduce((acc, s, i, a) => {
+    console.log(i, s)
+    return acc + (i === a.length-1 ? ' and ' : ', ') + s
+  })
+}
+```

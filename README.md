@@ -10,4 +10,7 @@
 - **17/04/18** - [kakatas](07-kakatas) (**algo**, **codewars**)
 - **19/04/18** - [katas-3](08-katas-3) (**algo**, **codewars**)
 - **24/04/18** - [katas-formatting](09-katas-formatting) (**algo**, **formatting**, **codewars**)
-- **05/06/18** - [react-1](10-dojo-react-1) (**react**)
+
+### React
+- **05/06/18** - [react-basics](10-dojos-react#1---react-basics) (**react**)
+- **12/06/18** - [react-with-redux](10-dojos-react#2---react-with-redux) (**redux**)
