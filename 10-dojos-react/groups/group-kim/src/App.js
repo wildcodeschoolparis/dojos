@@ -1,37 +1,49 @@
 import React, { Component } from 'react'
-import fetchedUsers from './users.json'
 import User from './components/User.js'
 import './App.css'
+import store from './store.js'
+import { addFriend, loadUsers } from './actions.js'
 
 class App extends Component {
-  state = {
-    users: [],
-    friends: []
-  }
 
   addFriend = friend => {
-    this.setState({ friends: [ ...this.state.friends, friend ] })
+    store.dispatch(addFriend(friend))
   }
 
   componentDidMount() {
-    // fetch -> fetchedUsers
+    // clem version
+    // this.state = store.getState()
+    // store.subscribe(() => this.setState(store.getState()))
+    this.unsubscribe = store.subscribe(() => this.forceUpdate())
 
-    this.setState({ users: fetchedUsers })
+    const url = 'https://raw.githubusercontent.com/wildcodeschoolparis/datas/master/students.json'
+    fetch(url)
+      .then(response => response.json()) // JSON.parse
+      .then(users => {
+        store.dispatch(loadUsers(users))
+      })
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe()
   }
 
   render() {
-    console.log('render', { state: this.state })
+    console.log('render')
 
-    const friends = this.state.friends.map(friend =>
+    const state = store.getState()
+
+    const friends = state.friends.map(friend =>
       <div key={friend.id}>{friend.name}</div>
     )
 
-    const users = this.state.users.map(user =>
+    const users = state.users.map(user =>
       <User key={user.id} user={user} add={this.addFriend} className='container user' />
     )
 
     return (
       <div className="App">
+        <div>Message:<span>{state.message}</span></div>
         <span>--FOES--</span>
         {friends}
         <span>--USERS--</span>
